@@ -1,0 +1,17 @@
+---
+import { profile } from '../data/portfolio';
+---
+<header class="hero">
+  <div class="kicker">─&nbsp; O&nbsp; A R T E S Ã O &nbsp;─</div>
+  <h1><span class="ink-reveal">{profile.handle}</span></h1>
+  <div class="headline reveal">{profile.name} — {profile.role}</div>
+  <div class="rule reveal"></div>
+  <p class="quote reveal">「 {profile.quote} 」</p>
+
+  <nav class="contact reveal" data-reveal-group>
+    <a class="accent" data-stagger href={`mailto:${profile.email}`}>E-mail</a>
+    <a data-stagger href={profile.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+    <a data-stagger href={profile.github} target="_blank" rel="noopener">GitHub</a>
+    <span class="loc" data-stagger>{profile.location}</span>
+  </nav>
+</header>

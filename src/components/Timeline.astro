@@ -1,0 +1,31 @@
+---
+import { jobs } from '../data/portfolio';
+---
+<section class="block" id="experiencia">
+  <div class="sec-label reveal"><span class="torii">⛩</span> A Trilha <span class="torii">⛩</span></div>
+  <div class="timeline">
+    {jobs.map((job) => (
+      <article class={`job reveal${job.now ? ' now' : ''}`}>
+        <div class="company">
+          <h3>{job.company}</h3>
+          <span class="period">{job.period}</span>
+        </div>
+        <div class="place">{job.place}</div>
+        <div class="roles">
+          {job.roles.map((role) => (
+            <div class="role">
+              <h4 set:html={role.title + (role.now ? ' <span class="badge-now">agora</span>' : '')} />
+              <div class="role-meta">{role.meta}</div>
+              <ul>
+                {role.bullets.map((b) => <li set:html={b} />)}
+              </ul>
+              <div class="tags">
+                {role.tags.map((t) => <span class={`tag${t.hot ? ' hot' : ''}`}>{t.label}</span>)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

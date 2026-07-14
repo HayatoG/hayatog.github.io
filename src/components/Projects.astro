@@ -1,0 +1,16 @@
+---
+import { projects } from '../data/portfolio';
+---
+<section class="block" id="projetos">
+  <div class="sec-label reveal"><span class="torii">⛩</span> A Obra <span class="torii">⛩</span></div>
+  <div class="projects reveal" data-reveal-group>
+    {projects.map((p) => (
+      <a class="proj" data-stagger href={p.url} target="_blank" rel="noopener">
+        <span class="arrow">↗</span>
+        <h3><span class="torii">⛩</span> {p.name}</h3>
+        <p set:html={p.desc} />
+        <div class="ptags">{p.tags}</div>
+      </a>
+    ))}
+  </div>
+</section>

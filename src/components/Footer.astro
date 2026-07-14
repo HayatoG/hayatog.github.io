@@ -1,0 +1,13 @@
+---
+import { profile } from '../data/portfolio';
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="foot-quote reveal"><span class="torii">⛩</span> se tem silício, dá pra fazer rodar. <span class="torii">⛩</span></div>
+  <div class="foot-links reveal">
+    <a href={`mailto:${profile.email}`}>E-mail</a>
+    <a href={profile.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+    <a href={profile.github} target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="copyright">© {year} {profile.name} · {profile.domain}</div>
+</footer>

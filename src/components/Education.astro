@@ -1,0 +1,22 @@
+---
+import { education, courses } from '../data/portfolio';
+---
+<section class="block" id="formacao">
+  <div class="sec-label reveal"><span class="torii">⛩</span> A Forja <span class="torii">⛩</span></div>
+  <div class="edu reveal">
+    {education.map((e) => (
+      <div class="edu-item">
+        <div class="ed-main">
+          <h3>{e.title}</h3>
+          <p>{e.place}</p>
+        </div>
+        <div class="ed-date">{e.date}</div>
+      </div>
+    ))}
+    <div class="extra-courses">
+      {courses.map((c) => (
+        <span class="course"><b>{c.name}</b> · {c.place}</span>
+      ))}
+    </div>
+  </div>
+</section>

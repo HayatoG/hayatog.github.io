@@ -1,0 +1,17 @@
+---
+import { arsenal } from '../data/portfolio';
+---
+<section class="block" id="arsenal">
+  <div class="sec-label reveal"><span class="torii">⛩</span> O Arsenal <span class="torii">⛩</span></div>
+  <div class="arsenal">
+    {arsenal.map((group) => (
+      <div class="arsenal-group reveal" data-reveal-group>
+        <div class="gtitle"><span class="torii">⌂</span> {group.title}</div>
+        <div class="gdesc">{group.desc}</div>
+        <div class="skill-badges">
+          {group.skills.map((s) => <span class="skill" data-stagger>{s}</span>)}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
