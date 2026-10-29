@@ -33,14 +33,24 @@ export interface Job {
 export const jobs: Job[] = [
   {
     company: 'Verzel Soluções em Sistemas',
-    period: 'jun 2024 — o momento · 2 a 2 m',
+    period: 'jun 2024 — o momento · 2 a 5 m',
     place: 'São Paulo, Brasil',
     now: true,
     roles: [
       {
-        title: 'Desenvolvedor Mobile | Full Stack — Pleno II',
-        meta: 'jun 2025 — o momento',
+        title: 'Desenvolvedor Mobile | Full Stack — Pleno III',
+        meta: 'out 2026 — o momento · Remoto',
         now: true,
+        bullets: [
+          'Referência técnica no ecossistema <b>VAR</b>, conduzindo soluções de ponta a ponta entre o app <b>Flutter</b> (Desktop / Android) e as APIs em <b>Java</b>.',
+          'Integração de pagamentos por aproximação com o <b>Getnet Tap on Phone</b> (App-to-App via Intents e Deeplinks): o smartphone da loja vira maquininha, com envio da transação, retorno do resultado e conciliação com a venda — <span class="win">sem equipamento dedicado</span>.',
+          'Desenvolvimento do <b>Overlimit</b>, nova oferta de crédito no PDV, e contribuição contínua na evolução do Mobile, na arquitetura e na resolução de problemas críticos em produção.',
+        ],
+        tags: [{ label: 'Flutter', hot: true }, { label: 'Java', hot: true }, { label: 'Gestão de projetos' }],
+      },
+      {
+        title: 'Desenvolvedor Mobile | Full Stack — Pleno II',
+        meta: 'jun 2025 — out 2026',
         bullets: [
           'Desenvolvimento de novos endpoints em <b>Java</b>, garantindo performance e escalabilidade.',
           'Evolução e manutenção contínua do principal aplicativo <b>Flutter</b> em produção.',
@@ -176,26 +186,27 @@ export interface Project {
   url: string;
   desc: string;    // pode conter <b> e <i>
   tags: string;
+  stars: number;
 }
 export const projects: Project[] = [
-  { name: 'dusklight', url: 'https://github.com/hayatog/dusklight',
+  { name: 'iss_pc', url: 'https://github.com/HayatoG/iss_pc', stars: 993,
+    desc: 'Port nativo para PC (Linux/Windows) de <b>inFAMOUS Second Son</b>. Usa o seu próprio dump do jogo.',
+    tags: 'c++ — port — ps4' },
+  { name: 'tlg_pc', url: 'https://github.com/HayatoG/tlg_pc', stars: 496,
+    desc: 'Port nativo para PC de <b>The Last Guardian</b>, com mouse/teclado, 60 FPS opcional e filtros SMAA/CAS.',
+    tags: 'c++ — port — ps4' },
+  { name: 'gr2_pc', url: 'https://github.com/HayatoG/gr2_pc', stars: 150,
+    desc: 'Port nativo para PC de <b>Gravity Rush 2</b>, com launcher bilíngue (inglês/português).',
+    tags: 'c++ — port — ps4' },
+  { name: 'dusklight', url: 'https://github.com/HayatoG/dusklight', stars: 72,
     desc: 'Twilight Princess <i>decomp</i> rodando na <b>Tegra X1</b> via <b>NVK/Vulkan</b>. O port mais ambicioso da bancada.',
     tags: 'c++ — vulkan — libnx' },
-  { name: 'tmc', url: 'https://github.com/hayatog/tmc',
-    desc: 'Decompilação de <i>Zelda: The Minish Cap</i>. Byte a byte, até bater <i>matching</i>.',
+  { name: 'tmc', url: 'https://github.com/HayatoG/tmc', stars: 29,
+    desc: 'Decompilação de <i>Zelda: The Minish Cap</i> (USA/JP/EU). Byte a byte, até bater <i>matching</i>.',
     tags: 'c — decomp — gba' },
-  { name: 'ARMSX2-NX', url: 'https://github.com/hayatog/ARMSX2-NX',
-    desc: 'Port do <b>ARMSX2</b> (PS2) pro Nintendo Switch. Emulação em ARM, sem rede de segurança.',
-    tags: 'c++ — emulation — switch' },
-  { name: 'aurora-switch', url: 'https://github.com/hayatog/aurora-switch',
-    desc: 'Aurora fork com bring-up de <b>libnx + Vulkan/NVK</b>. Gráficos no metal.',
-    tags: 'c++ — graphics — nvk' },
-  { name: 'nova-strike', url: 'https://github.com/hayatog/nova-strike',
-    desc: 'Space shooter 2D inteiro em <b>HTML5 Canvas + JS puro</b>. Sem engine — só código.',
-    tags: 'javascript — canvas — gamedev' },
-  { name: 'arcade-hub', url: 'https://github.com/hayatog/arcade-hub',
-    desc: '<b>KEPLER ARCADE</b> — hub de jogos web + <i>TURBO RUSH</i>, um racer 3D infinito.',
-    tags: 'javascript — webgl — arcade' },
+  { name: 'switch-nvk', url: 'https://github.com/HayatoG/switch-nvk', stars: 21,
+    desc: 'Driver <b>NVK</b> (Vulkan open-source da Mesa) portado pro <b>Tegra X1</b> do Switch, sem blob da NVIDIA.',
+    tags: 'c — vulkan — libnx' },
 ];
 
 export interface ItchGame {

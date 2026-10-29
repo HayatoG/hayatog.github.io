@@ -9,7 +9,7 @@ import { projects, itchGames } from '../data/portfolio';
         <span class="arrow">↗</span>
         <h3><span class="torii">⛩</span> {p.name}</h3>
         <p set:html={p.desc} />
-        <div class="ptags">{p.tags}</div>
+        <div class="ptags">{p.tags} — ★ {p.stars}</div>
       </a>
     ))}
   </div>
