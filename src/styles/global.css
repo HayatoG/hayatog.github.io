@@ -190,6 +190,12 @@ section.block { padding: 44px 0; }
 .proj p { font-size: 14px; color: var(--neutral); line-height: 1.5; margin-bottom: 10px; }
 .proj p :global(b) { color: var(--ink); font-weight: 600; }
 .proj .ptags { font-size: 11px; letter-spacing: 1px; color: var(--muted); text-transform: lowercase; }
+.games { max-width: 860px; margin: 24px auto 0; }
+.game { border: 1px solid var(--line-strong); padding: 22px 24px; }
+.game h3 { font-family: var(--serif); font-weight: 500; font-size: 24px; color: var(--ink); margin-bottom: 6px; }
+.game h3 .torii { color: var(--accent); font-size: 20px; }
+.game p { font-size: 14px; color: var(--neutral); line-height: 1.5; margin-bottom: 12px; }
+.game iframe { display: block; max-width: 100%; border: 0; }
 .proj .arrow { position: absolute; top: 22px; right: 24px; color: var(--faint); font-size: 16px; transition: color .16s ease, transform .16s ease; }
 .proj:hover .arrow { color: var(--accent); transform: translate(2px, -2px); }
 

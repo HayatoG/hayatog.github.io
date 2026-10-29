@@ -198,6 +198,17 @@ export const projects: Project[] = [
     tags: 'javascript — webgl — arcade' },
 ];
 
+export interface ItchGame {
+  name: string;
+  url: string;
+  embedId: string;
+  desc: string;
+}
+export const itchGames: ItchGame[] = [
+  { name: 'Crystal Defense', url: 'https://hayatog.itch.io/crystal-defense', embedId: '5257186',
+    desc: 'Jogo publicado no <b>itch.io</b>. Defenda o cristal.' },
+];
+
 export interface Education { title: string; place: string; date: string; }
 export const education: Education[] = [
   { title: 'Bacharelado em Sistemas de Informação', place: 'Centro Universitário Senac', date: 'concluído · 2023' },

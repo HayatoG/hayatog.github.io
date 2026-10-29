@@ -1,5 +1,5 @@
 ---
-import { projects } from '../data/portfolio';
+import { projects, itchGames } from '../data/portfolio';
 ---
 <section class="block" id="projetos">
   <div class="sec-label reveal"><span class="torii">⛩</span> A Obra <span class="torii">⛩</span></div>
@@ -11,6 +11,17 @@ import { projects } from '../data/portfolio';
         <p set:html={p.desc} />
         <div class="ptags">{p.tags}</div>
       </a>
+    ))}
+  </div>
+  <div class="games reveal">
+    {itchGames.map((g) => (
+      <div class="game">
+        <h3><span class="torii">⛩</span> {g.name}</h3>
+        <p set:html={g.desc} />
+        <iframe frameborder="0" src={`https://itch.io/embed/${g.embedId}`} width="552" height="167" loading="lazy" title={`${g.name} no itch.io`}>
+          <a href={g.url}>{g.name} by hayatog</a>
+        </iframe>
+      </div>
     ))}
   </div>
 </section>
